@@ -1,17 +1,12 @@
 """Raster copying."""
 
+include "gdal.pxi"
+
 import logging
 import os
 import os.path
 
 from rasterio._err import CPLErrors
-
-
-from rasterio._gdal cimport (
-    CSLDestroy, CSLSetNameValue, GDALClose, GDALCreateCopy,
-    GDALGetDriverByName, GDALOpen)
-
-include "gdal.pxi"
 
 
 log = logging.getLogger(__name__)

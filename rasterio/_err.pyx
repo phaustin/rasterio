@@ -30,14 +30,10 @@ manager raises a more useful and informative error:
 
 """
 
+include "gdal.pxi"
+
 from enums import IntEnum
 import sys
-
-from rasterio._gdal cimport (
-    CPLErrorReset, CPLGetLastErrorMsg, CPLGetLastErrorNo,
-    CPLGetLastErrorType)
-
-include "gdal.pxi"
 
 
 # Python exceptions expressing the CPL error numbers.
